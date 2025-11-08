@@ -2,12 +2,27 @@
 
 A clean, OOP-based framework for developing and testing crypto perpetual trading strategies with built-in position sizing and risk management.
 
+## Why "Redemption"?
+
+After losing significant money in crypto last year by holding altcoins and meme coins without proper analysis or strategy, I decided it was time for a **redemption arc**. No more holding shit coins hoping they'll moon. No more buying into hype without doing the real work.
+
+This framework represents a commitment to:
+- **Real technical analysis** instead of gambling
+- **Disciplined risk management** instead of emotional trading
+- **Data-driven decisions** instead of following Twitter shills
+- **Calculated position sizing** instead of YOLO trades
+- **Systematic strategies** instead of hope and prayers
+
+If you've been burned by crypto like I have, this is your tool to fight back with discipline and analysis.
+
 ## Features
 
 - **Real-time Price Data**: Integration with CryptoCompare API
+- **Interactive K線圖 Visualization**: Beautiful candlestick charts with volume analysis and technical indicators
 - **Position Sizing Calculator**: Automatically calculate position sizes based on risk parameters
 - **Extensible Strategy Framework**: Easy-to-extend base classes for custom strategies
 - **Risk Management**: Built-in stop loss and target calculations
+- **Technical Analysis Tools**: SMA, EMA, and expandable indicator system
 - **Clean Architecture**: Modular, OOP design for easy maintenance and expansion
 
 ## Project Structure
@@ -20,13 +35,18 @@ redemption/
 │   │   └── cryptocompare_provider.py
 │   ├── position/             # Position sizing logic
 │   │   └── position_calculator.py
-│   └── strategies/           # Trading strategies
-│       ├── base_strategy.py
-│       └── simple_strategy.py
-├── config.py                 # Configuration settings
-├── example.py               # Example usage
-├── requirements.txt         # Python dependencies
-└── .env.example            # Environment variables template
+│   ├── strategies/           # Trading strategies
+│   │   ├── base_strategy.py
+│   │   └── simple_strategy.py
+│   └── visualization/        # Interactive charts (K線圖)
+│       ├── chart_visualizer.py
+│       └── README.md
+├── main.py                   # Main example
+├── example_chart.py          # Chart visualization examples
+├── quick_chart_demo.py       # Quick chart demo
+├── CHART_QUICKSTART.md       # Chart quick start guide
+├── requirements.txt          # Python dependencies
+└── .env.example             # Environment variables template
 ```
 
 ## Installation
@@ -49,10 +69,16 @@ redemption/
 
 ## Quick Start
 
-**Simple usage - Set your own prices:**
+**Trading Strategy Example:**
 
 ```bash
-python quick_example.py
+python main.py
+```
+
+**Interactive K線圖 Visualization:**
+
+```bash
+python quick_chart_demo.py
 ```
 
 **Full example with market data:**
